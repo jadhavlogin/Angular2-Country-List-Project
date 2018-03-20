@@ -1,0 +1,20 @@
+<div class="container py-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Favorites</h2>
+                <hr class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 mx-auto row favCountryCards">
+                        
+                            <div class="card col-md-3"  *ngFor="let country of favCountryList">
+                                    <div class="card-body">
+                                        <label class="mainLabel">{{country.name}}</label>
+                                        <h4 class="subLabel"><i class="	fa fa-hospital-o"></i>&nbsp;{{country.capital}}</h4>
+                                        <i class="fa fa-heart float-right favCntrIcon" (click)="removeFromFavorites(country.name)"></i>
+                                    </div>
+                                </div>
+                    </div>         
+                </div>
+            </div>
+        </div>
+</div>                

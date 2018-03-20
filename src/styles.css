@@ -1,0 +1,54 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  font-family: 'Roboto', sans-serif, Arial;
+  background-color: #d3d3d3;
+}
+.margin-right-10 {
+  margin-right: 10px;
+}
+.h-cursor{
+  cursor: pointer;
+}
+.countryName{
+  color: maroon;
+}
+.countryName .fa-chevron-circle-right{
+  font-size: 30px;
+  margin-top: 25px;
+}
+.capitalName{
+  font-size: 20px;
+}
+.viewFavText{
+  font-size: 24px;
+}
+.countryDetailsName{
+  height: 30px;
+}
+.countryCards .card{
+  margin: 10px;
+}
+#googleMap{
+  height: 500px;
+}
+.favCountryCards .card{
+   margin: 5px;
+   min-height: 185px;
+}
+.favCountryCards .mainLabel{
+   font-size: 24px; 
+}
+.favCountryCards .subLabel{
+  font-size: 20px;
+}
+.favCountryCards .card .card-body{
+  position: relative;
+}
+.favCountryCards .favCntrIcon{
+  position: absolute;
+  top: 75%;
+  left: 84%;
+  font-size: 26px;
+  color: red;
+}

@@ -1,0 +1,59 @@
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="countryDetailsName">
+               <span class="float-left"><i (click)="goToCountryList()" class="fa fa-arrow-left h-cursor" style="font-size:24px"></i>&nbsp;&nbsp; {{country.name}}&nbsp;
+                    <i *ngIf="!isFavourite" (click)="setAsFavourite()" class="fa fa-heart-o h-cursor" style="font-size:24px"></i>
+                    <i *ngIf="isFavourite" (click)="removeFromFavorites()" class="fa fa-heart h-cursor" style="font-size:24px;color:red"></i>
+               </span>
+               <span class="float-right viewFavText"><a [routerLink]="['/favourites']">View Favourites</a>&nbsp;&nbsp;<span *ngIf="favCount > 0" >{{favCount}}</span>   </span> 
+            </h2>
+            <hr class="col-md-12">
+            <div class="row">
+                <label class="col-md-12">Country Information</label>
+                <div class="col-md-12 mx-auto row countryCards">
+                            
+                       <div class="card col-md-4">
+                            <div class="card-body">
+                                <label class="subLabel">Capital</label>
+                                <h3>{{country.capital}}</h3>
+                            </div>
+                        </div>
+                        <div class="card col-md-4">
+                            <div class="card-body">
+                                <label class="subLabel">Sub Region</label>
+                                <h3>{{country.subregion }}</h3>
+                            </div>
+                        </div>
+                        <div class="card col-md-3">
+                            <div class="card-body">
+                                <label class="subLabel">Population</label>
+                                <h3>{{country.population }}</h3>
+                            </div>
+                        </div>
+
+                        <div class="card col-md-4">
+                                <div class="card-body">
+                                    <label class="subLabel">Region</label>
+                                    <h3>{{country.region}}</h3>
+                                </div>
+                            </div>
+                            <div class="card col-md-4">
+                                <div class="card-body">
+                                    <label class="subLabel">Areas</label>
+                                    <h3>{{country.area }}</h3>
+                                </div>
+                            </div>
+                            
+                </div>
+            </div>
+            <hr class="col-md-12">
+            <div class="row">
+                <label class="col-md-12">Location</label>
+                <div class="col-md-12">
+                    <div id="googleMap" class="col-md-10"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                               

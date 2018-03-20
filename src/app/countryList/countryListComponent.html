@@ -1,0 +1,24 @@
+
+<div class="container py-5">
+    <div class="row" *ngIf="countryList[0]" >
+        <div class="col-md-12">
+            <h2 class="text-left">All Countries <i (click)="logout()" class="fa fa-power-off h-cursor" style="font-size:24px;float:right"></i></h2>
+            <div class="row">
+                <div class="col-md-12 mx-auto ">
+                       <p class="float-right">
+                            <a [routerLink]="['/favourites']">View Favourites</a>&nbsp;&nbsp;<span *ngIf="favCount > 0" >{{favCount}}</span> 
+                       </p> 
+                </div>
+                <div class="col-md-12 mx-auto">
+                    <input [(ngModel)]="searchText" placeholder="search text goes here" class="form-control form-control-lg rounded-0">
+                </div>
+                <hr class="col-md-12">
+                <div class="col-md-12 mx-auto">
+                    <div class="list-group h-cursor" *ngFor="let country of countryList | filter : searchText">
+                        <country-desc [countryDetails]="country"></country-desc>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
